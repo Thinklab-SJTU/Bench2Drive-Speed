@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Additional SEO -->
+  <meta name="theme-color" content="#2563eb">
+  <meta name="msapplication-TileColor" content="#2563eb">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://ajax.googleapis.com">
+  <link rel="preconnect" href="https://documentcloud.adobe.com">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+
+  <!-- TODO: Replace with your paper title and authors -->
+  <title>Bench2Drive-Speed | Can Users Specify Driving Speed? Bench2Drive-Speed: Benchmark and Baselines for Desired-Speed Conditioned Autonomous Driving</title>
+  
+  
+  <!-- Favicon and App Icons -->
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link rel="apple-touch-icon" href="static/images/favicon.ico">
+  
+  <!-- Critical CSS - Load synchronously -->
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  
+  <!-- Non-critical CSS - Load asynchronously -->
+  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  
+  <!-- Fallback for browsers that don't support preload -->
+  <noscript>
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  </noscript>
+  
+  <!-- Fonts - Optimized loading -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Defer non-critical JavaScript -->
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script defer src="static/js/bulma-carousel.min.js"></script>
+  <script defer src="static/js/bulma-slider.min.js"></script>
+  <script defer src="static/js/index.js"></script>
+
+  <style>
+  .gradient-text-1 {
+    background: linear-gradient(
+      90deg,
+      #9ca3af 0%,
+      #0969da 50%,
+      #9ca3af 51%,
+      #9ca3af 100%
+    );
+  
+    background-size: 300% 100%;
+    background-position: 0% 50%;
+  
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  
+    animation: moveGradient 5s linear infinite;
+  }
+
+  .gradient-text-2 {
+    background: linear-gradient(
+      90deg,
+      #9ca3af 0%,
+      #0969da 50%,
+      #9ca3af 51%,
+      #9ca3af 100%
+    );
+  
+    background-size: 300% 100%;
+    background-position: 0% 50%;
+  
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  
+    animation: moveGradient 9s linear infinite;
+  }
+
+  .gradient-text-3 {
+    background: linear-gradient(
+      90deg,
+      #9ca3af 0%,
+      #0969da 50%,
+      #9ca3af 51%,
+      #9ca3af 100%
+    );
+  
+    background-size: 300% 100%;
+    background-position: 0% 50%;
+  
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  
+    animation: moveGradient 12s linear infinite;
+  }
+  
+  @keyframes moveGradient {
+    0% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: -50% -100%;
+    }
+  }
+  </style>
+</head>
+<body>
+
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <main id="main-content">
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <!-- TODO: Replace with your paper title -->
+            <h1 class="title is-1 publication-title">
+              <div class="gradient-text-2" style="margin-bottom:32px;">
+                Can Users Specify Driving Speed?
+              </div>
+              <div style="font-size:64px; font-weight:700; margin-bottom:32px;">
+                Bench2Drive-<span style="color:#0969da; font-style:italic;">Speed</span>
+              </div>
+              <div class="gradient-text-1">
+                Benchmark and Baselines for Desired-
+              </div>
+              <div class="gradient-text-3">
+                Speed Conditioned Autonomous Driving
+              </div>
+            </h1>
+            <!-- <h1 class="title is-1 publication-title">Can Users Specify Driving Speed? Bench2Drive-Speed: Benchmark and Baselines for Desired-Speed Conditioned Autonomous Driving</h1> -->
+            <div class="is-size-5 publication-authors">
+              <!-- TODO: Replace with your paper authors and their personal links -->
+              <span class="author-block">
+                <a href="https://meteorcollector.github.io/" target="_blank">Yuqian Shao</a><sup>1</sup>,</span>
+                <span class="author-block">
+                  <a href="https://jiaxiaosong1002.github.io/" target="_blank">Xiaosong Jia</a><sup>2*</sup>,</span>
+                  <span class="author-block">
+                    <a>Langechuan Liu</a><sup>3</sup>
+                  </span>
+                  <span class="author-block">
+                    <a href="https://thinklab.sjtu.edu.cn/" target="_blank">Junchi Yan</a><sup>1*</sup>
+                  </span>
+                  </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <!-- TODO: Replace with your institution and conference/journal info -->
+                    <span class="author-block"><sup>1</sup>Sch. of Computer Science & Sch. of Artificial Intelligence, Shanghai Jiao Tong University <br><sup>2</sup>Institute of Trustworthy Embodied AI (TEAI), Fudan University <sup>3</sup>NVIDIA<br>Arxiv 2026</span>
+                    <!-- TODO: Remove this line if no equal contribution -->
+                    <span class="eql-cntrb"><small><br><sup>*</sup>Correspondence Author</small></span>
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- TODO: Update with your arXiv paper ID -->
+                      <span class="link-block">
+                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+
+                    <!-- TODO: Add your supplementary material PDF or remove this section
+                    <span class="link-block">
+                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Supplementary</span>
+                    </a>
+                  </span> -->
+
+                  <!-- TODO: Replace with your GitHub repository URL -->
+                  <span class="link-block">
+                    <a href="https://github.com/Thinklab-SJTU/Bench2Drive-Speed" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+              <span class="link-block">
+                <a href="https://huggingface.co/datasets/rethinklab/Bench2Drive-Speed" target="_blank"
+                class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                  <i class="fa-database"></i>
+                </span>
+                <span>Dataset</span>
+              </a>
+            </span>
+
+            <!-- TODO: Update with your arXiv paper ID -->
+            <span class="link-block">
+              <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+              class="external-link button is-normal is-rounded is-dark">
+              <span class="icon">
+                <i class="ai ai-arxiv"></i>
+              </span>
+              <span>arXiv</span>
+            </a>
+          </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <!-- TODO: Replace with your teaser video -->
+      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
+        <!-- TODO: Add your video file path here -->
+        <source src="static/videos/banner_video.mp4" type="video/mp4">
+      </video>
+      <!-- TODO: Replace with your video description -->
+      <h2 class="subtitle has-text-centered">
+        Demonstration of Bench2Drive-Speed's tasks and baseline capabilities.
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <!-- TODO: Replace with your paper abstract -->
+          <p>
+            End-to-end autonomous driving (E2E-AD) has achieved remarkable progress. However, one practical and useful function has been long overlooked: users may wish to customize the desired speed of the policy or specify whether to allow the autonomous vehicle to overtake. To bridge this gap, we present <b>Bench2Drive-Speed</b>, <b>a benchmark with metrics, dataset, and baselines for desired-speed conditioned autonomous driving</b>. We introduce explicit inputs of users' desired target-speed and overtake/follow instructions to driving policy models. We design quantitative metrics, including Speed-Adherence Score and Overtake Score, to measure how faithfully policies follow user specifications, while remaining compatible with standard autonomous driving metrics.<br>To enable training of speed-conditioned policies, one approach is to collect expert demonstrations that strictly follow speed requirements, an expensive and unscalable process in the real world. An alternative is to adapt existing regular driving data by treating the speed observed in future frames as the target speed for training. To investigate this, we construct <b>CustomizedSpeedDataset</b>, composed of 2,100 clips annotated with experts demonstrations, enabling systematic investigation of supervision strategies. Our experiments show that, under proper re-annotation, models trained on regular driving data perform comparably to on expert demonstrations, suggesting that <b>speed supervision can be introduced without additional complex real-world data collection</b>. Furthermore, we find that while target-speed following can be achieved without degrading regular driving performance, executing overtaking commands remains challenging due to the inherent difficulty of interactive behaviors.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-vcentered">
+
+      <!-- 左：文字 -->
+      <div class="column is-5">
+        <h2 class="title is-3  has-text-centered">Benchmark</h2>
+        <p>
+          We propose a closed-loop benchmark for desired-speed conditioned driving.
+          It introduces explicit <b>target speed</b> and <b>overtake/follow commands</b>.
+        </p>
+        <ul>
+          <li>- Quantitative controllability metrics (speed adherence, overtake score)</li>
+          <li>- Joint evaluation of safety, comfort, and task success</li>
+          <li>- Compatible with Bench2Drive</li>
+        </ul>
+      </div>
+
+      <!-- 右：carousel -->
+      <div class="column is-7" style="position: relative;">
+
+        <!-- 左箭头 -->
+        <!-- <button onclick="this.parentElement.querySelector('.carousel').scrollBy({ left: -600, behavior: 'smooth' })"
+          style="position:absolute; left:-20px; top:50%; transform:translateY(-50%); z-index:10;">
+          &#8249;
+        </button> -->
+
+        <!-- 右箭头 -->
+        <!-- <button onclick="this.parentElement.querySelector('.carousel').scrollBy({ left: 600, behavior: 'smooth' })"
+          style="position:absolute; right:-20px; top:50%; transform:translateY(-50%); z-index:10;">
+          &#8250;
+        </button> -->
+
+        <!-- Carousel -->
+        <div class="carousel" style="
+          display:flex;
+          overflow-x:auto;
+          scroll-snap-type:x mandatory;
+          gap:20px;
+        ">
+          <div style="min-width:100%; scroll-snap-align:start;">
+            <img src="static/images/difficulties.jpg" style="width:100%;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section hero is-light">
+  <div class="container">
+    <div class="columns is-vcentered">
+
+      <!-- 右：carousel -->
+      <div class="column is-7" style="position: relative;">
+        <!-- Carousel -->
+        <div class="carousel" style="
+          display:flex;
+          overflow-x:auto;
+          scroll-snap-type:x mandatory;
+          gap:20px;
+        ">
+          <div style="min-width:100%; scroll-snap-align:start;">
+            <img src="static/images/dataset_layout.jpg" style="width:100%;">
+          </div>
+        </div>
+      </div>
+
+      <!-- 左：文字 -->
+      <div class="column is-5">
+        <h2 class="title is-3  has-text-centered">Dataset</h2>
+        <p>
+        We construct a dataset of 2,100 scenarios with explicit speed annotations.
+        </p>
+        <ul>
+          <li>- Balanced across difficulty and behaviors</li>
+          <li>- Includes dynamic within-route speed variation</li>
+          <li>- Introduces <b>virtual target speed</b> for scalable supervision</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-vcentered">
+      <!-- 左：文字 -->
+      <div class="column is-5">
+        <h2 class="title is-3  has-text-centered">Baselines & Findings</h2>
+        <p>
+        We evaluate speed-conditioned policies under multiple settings.
+        </p>
+        <ul>
+          <li>- Models can follow target speed without harming safety</li>
+          <li>- Overtaking remains challenging</li>
+          <li>- Virtual target speed performs comparably to expert supervision</li>
+        </ul>
+      </div>
+
+      <!-- 右：carousel -->
+      <div class="column is-7" style="position: relative;">
+
+        <!-- Carousel -->
+        <div class="carousel" style="
+          display:flex;
+          overflow-x:auto;
+          scroll-snap-type:x mandatory;
+          gap:20px;
+        ">
+          <div style="min-width:100%; scroll-snap-align:start;">
+            <img src="static/images/table1.png" style="width:100%;">
+          </div>
+          <div style="min-width:100%; scroll-snap-align:start;">
+            <img src="static/images/table2.png" style="width:100%;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--BibTex citation -->
+<section class="section hero is-light" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <div class="bibtex-header">
+      <h2 class="title">BibTeX</h2>
+      <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+        <i class="fas fa-copy"></i>
+        <span class="copy-text">Copy</span>
+      </button>
+    </div>
+    <pre id="bibtex-code"><code>@article{bench2drive_speed,
+  title={Can Users Specify Driving Speed? Bench2Drive-Speed: Benchmark and Baselines for Desired-Speed Conditioned Autonomous Driving},
+  author={Yuqian Shao and Xiaosong Jia and Langechuan Liu and Junchi Yan},
+  journal={...},
+  year={2026}
+}
+</code></pre>
+  </div>
+</section>
+<!--End BibTex citation -->
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+</html>

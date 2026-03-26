@@ -1,5 +1,0 @@
-lightning
-pillow
-torchvision
-imgaug
-matplotlib
